@@ -1,0 +1,132 @@
+#wrapper
+{
+    position: relative;
+    width: 953px;
+    height: 850px;
+    margin: 0 auto;
+    border: none;
+    clear: both;
+}
+
+#sidebar
+{
+    margin-top: 2px;
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 202px;
+    height: 51px;
+    margin: 0 0 0 0;
+    float: left;
+}
+
+#lpanel
+{
+    margin-left: 13px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    border: 1px solid #a5a3a3;
+    
+    background-color: #ffffff;
+   
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    
+    -moz-box-shadow:0px 0px 2px 1px #ccccc8;
+    -o-box-shadow:0px 0px 2px 1px #ccccc8;
+    -webkit-box-shadow:0px 0px 2px 1px #ccccc8;
+    -ms-box-shadow:0px 0px 2px 1px #ccccc8;
+}
+
+#lpanelr
+{
+    margin-left: 13px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 1px solid #a5a3a3;
+    float: left;
+    background-color: #ffffff;
+   
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    
+    -moz-box-shadow:0px 0px 2px 1px #ccccc8;
+    -o-box-shadow:0px 0px 2px 1px #ccccc8;
+    -webkit-box-shadow:0px 0px 2px 1px #ccccc8;
+    -ms-box-shadow:0px 0px 2px 1px #ccccc8;
+}
+
+#lpanel span, #rpanel span
+{
+	color: #FF0000;
+    font-family: Calibri;
+    position: relative;
+    font-size: small;
+    font-weight: 600;
+    width: 202px;
+	height: 18px;
+    margin-left: 10px;
+   
+   
+}
+#rpanel
+{
+    margin-left: 250px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 332px;
+    height: 272px;
+    float:none;
+    background-color: #ffffff;
+    
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    
+    -moz-box-shadow:0px 0px 2px 1px #ccccc8;
+    -o-box-shadow:0px 0px 2px 1px #ccccc8;
+    -webkit-box-shadow:0px 0px 2px 1px #ccccc8;
+    -ms-box-shadow:0px 0px 2px 1px #ccccc8;
+    font-family: "Myriad Pro";
+    top: -16px;
+    left: -140px;
+}
+
+#rpanelr
+{
+    margin-left: 13px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 400px;
+    height: 820px;
+   
+    float: left;
+    background-color: #ffffff;
+    
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    
+    -moz-box-shadow:0px 0px 2px 1px #ccccc8;
+    -o-box-shadow:0px 0px 2px 1px #ccccc8;
+    -webkit-box-shadow:0px 0px 2px 1px #ccccc8;
+    -ms-box-shadow:0px 0px 2px 1px #ccccc8;
+    
+}
+#rpanel #button,#lpanel #button1
+{
+    width: 350px;
+    height: 34px;
+    display: inline;
+    position: absolute;
+    background: url("button1.gif") repeat-x;

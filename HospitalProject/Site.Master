@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HospitalProject.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>ABC Hospital Pvt. Ltd.</title>
+    <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1 {
+            width: 100%;
+        }
+
+        .style2 {
+            font-family: Calibri;
+            font-size: 17px;
+            text-align: right;
+            color: #000099;
+            width: 33px;
+        }
+
+        .style3 {
+            font-family: Calibri;
+            color: #000066;
+            font-size: 17px;
+        }
+
+        .style4 {
+            font-family: Calibri;
+            color: #FF0000;
+        }
+
+        .style5 {
+            width: 350px;
+            height: 300px;
+        }
+
+        .style6 {
+            font-size: medium;
+        }
+
+        .style7 {
+            font-size: medium;
+        }
+
+        .style8 {
+            font-family: Calibri;
+            color: #FF0000;
+            font-size: medium;
+        }
+
+        .style9 {
+            width: 33px;
+            font-size: medium;
+        }
+
+        .style10 {
+            width: 400px;
+            height: 50px;
+        }
+
+        .style12 {
+            font-family: Calibri;
+            font-size: 17px;
+            text-align: right;
+            color: #000099;
+            width: 119px;
+        }
+
+        .style13 {
+            width: 119px;
+        }
+    </style>
+    <link href="~/Styles/style1.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+    <meta charset="utf-8" />  
+    <style type="text/css">  
+      html, body, #canvasMap {  
+        height: 100%;  
+        margin: 0px;  
+        padding: 0px  
+      }  
+    </style>  
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>  
+    <script type="text/javascript">  
+        var map;  
+        function LoadGoogleMAP() {  
+            var SetmapOptions = {  
+                zoom: 10,  
+                center: new google.maps.LatLng(53.2734, -7.77832031)  
+            };  
+            map = new google.maps.Map(document.getElementById('canvasMap'),  
+      SetmapOptions);  
+        }  
+  
+        google.maps.event.addDomListener(window, 'load', LoadGoogleMAP);  
+  
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            <div id="header">
+
+                <div class="row">
+                    <div class="column">
+                        <a href="Home.aspx" id="logo">
+                            <img src="images/abc.png" alt="logo" style="width: 250px; height: 150px; float: left; margin: 0px 0px 10px 0px; border-radius: 10px;" />
+                        </a>
+                    </div>
+                    <div class="column">
+                        <img alt="" src="images/Health15-512.png" style="width: 150px; height: 150px; margin: -60px 0px -90px 10px; border-radius: 10px;" />
+                    </div>
+
+                </div>
+
+
+                <ul id="navigation">
+                    <li><a href="DoctorLogin.aspx">Doctor Login</a></li>
+                    <li><a href="AdminLogin.aspx">Admin Login</a></li>
+                    <li><a href="StaffLogin.aspx">Staff Login</a></li>
+                    <li><a href="PatientLogin.aspx">Patient Login</a></li>                    
+                </ul>
+            </div>
+            <div class="content">
+                <div class="navigation">
+                    <ul id="buttons">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+            <div id="footer">
+                <div class="blog">
+                    <h2>Blog</h2>
+                    <ol>
+                        <li><a href="#">The Best Doctor Gives the least medicine<span> by: Dr. Alexander
+                        Chief Blogger</span></a></li>
+                        <li><a href="#">One of the biggest health care challenge is to identify a Good Hospital<span> by: Dr. Alan
+                        CEO</span></a></li>
+                        <li><a href="#">When Time is crucial Never miss a minute<span> by: Dr. Parthiv,
+                        Cardialogist</span></a></li>
+                        <li><a href="#">A Hospital Alone shows what war is<span> by: Dr. Shaurya 
+                        Oncologist</span></a></li>
+                    </ol>
+                </div>
+                <div class="section">
+                    <h2>Get in touch</h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>
+                                    Email</label>
+                            </td>
+                            <td>:
+                            </td>
+                            <td>support@abchospitals.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Address</label>
+                            </td>
+                            <td>:
+                            </td>
+                            <td>IT Park, B Block, 3rd Floor, Hospital Street, Ireland, Europe
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Phone</label>
+                            </td>
+                            <td>:
+                            </td>
+                            <td>1-800-209-2710
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Follow us</label>
+                            </td>
+                            <td>:
+                            </td>
+                            <td>
+                                <a href="#" target="_blank" class="twitr"></a><a href="#" target="_blank" class="fb"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p id="footnote">
+                    &#169; 2019 ABC Hospital Pvt Ltd. All rights reserved
+                </p>
+            </div>
+        </div>
+        
+    </form>
+    <div id="canvasMap"> </div>  
+</body>
+</html>
