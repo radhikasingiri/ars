@@ -37,8 +37,6 @@ namespace HospitalProject
 
             //inserting Value to database
             inscmd.CommandText = "INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, CreatedBy, CreatedDate, AppointmentTime) VALUES ('" + PatientId + "', '" + ddlDoctorName.SelectedValue + "','" + ddlmonth.SelectedItem.ToString() + " " + ddlday.SelectedItem.ToString() + "," + ddlyear.SelectedItem.ToString() + "','Patient','" + DateTime.Now + "',  '" + txtTime.Text + "')";
-
-
             try
             {
                 inscmd.ExecuteNonQuery();
@@ -50,14 +48,17 @@ namespace HospitalProject
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("yellinedi.hanuma@gmail.com");
-                mail.To.Add("hanumaisyellinedi@gmail.com");
-                mail.Subject = "Appointment booked";
-                mail.Body = "This is confirmation";
+                mail.From = new MailAddress("arshospital.pvt@gmail.com");
+                mail.To.Add( lblEmail.Text); 
+                
+                mail.Subject = "Appointment booked Successfully";
+                string text = "Appointment booked Successfully \r\n";
+                text += "details are Doctor name: '" + ddlDoctorName.SelectedItem.Text + "'  , Appointment date: '" + ddlmonth.SelectedItem.ToString() + "/ " + ddlday.SelectedItem.ToString() + "/" + ddlyear.SelectedItem.ToString() + "' Appointment time: '" + txtTime.Text +  "'  , please be available 15min before appointment time'";
+                mail.Body = text;
 
                 SmtpServer.EnableSsl = true;
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("xxxxx@gmail.com", "xxxxxxx");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("arshospital.pvt@gmail.com", "bujji2baby");
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.Port = 587;                
                 SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;

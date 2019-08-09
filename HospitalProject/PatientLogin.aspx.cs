@@ -24,7 +24,7 @@ namespace HospitalProject
 
             string cmdstr2 = "Select UserID from Users where UserName='" + txtusername.Text + "' and Password='" + txtpassword.Text + "' and roleId=3";
             SqlCommand userid = new SqlCommand(cmdstr2, con2);
-            int temp2 = Convert.ToInt32(userid.ExecuteScalar().ToString());
+           int temp2 = Convert.ToInt32(userid.ExecuteScalar().ToString());
             con2.Close();
             if (temp2 != 0)
             {
